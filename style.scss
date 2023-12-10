@@ -1,0 +1,121 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  font-size: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+//VARIABLES
+
+$font-family--heading: "Big Shoulders Display", "Times New Roman", sans-serif;
+$font-family--paragraph: "Lexend Deca", Arial, sans-serif;
+
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+
+$font-size--heading: 2rem;
+
+$color-font--paragraph: hsla(0, 0%, 100%, 0.75);
+$color-font--heading: hsl(0, 0%, 95%);
+$color-background--body: hsl(0, 0%, 95%);
+
+$color-background--sedan: hsl(31, 77%, 52%);
+$color-background--suv: hsl(184, 100%, 22%);
+$color-background--luxury: hsl(179, 100%, 13%);
+
+//BASE
+
+body {
+  background-color: $color-background--body;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: $font-family--heading;
+  color: $color-font--heading;
+  text-transform: uppercase;
+  font-size: $font-size--heading;
+}
+
+p {
+  font-family: $font-family--paragraph;
+  color: $color-font--paragraph;
+  line-height: 1.5rem;
+}
+
+button {
+  font-family: $font-family--paragraph;
+  background-color: $color-background--body;
+  mix-blend-mode: screen;
+  cursor: pointer;
+  padding: 10px 25px 10px 25px;
+  border-radius: 50px;
+  border: 2px solid $color-background--body;
+  transition: background-color 100ms;
+  white-space: nowrap;
+  align-self: self-end;
+}
+
+button:hover {
+  border: 2px solid $color-background--body;
+  color: $color-font--paragraph;
+  background-color: transparent;
+}
+
+.card--sedan {
+  background-color: $color-background--sedan;
+}
+
+.card--suv {
+  background-color: $color-background--suv;
+}
+
+.card--luxury {
+  background-color: $color-background--luxury;
+}
+
+//MOBILE
+
+.wrapper {
+  width: clamp(15rem, 80%, 25rem);
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  height: 100%;
+}
+
+//DESKTOP
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+
+  button {
+    margin-top: 4rem;
+  }
+  .wrapper {
+    width: clamp(30rem, 90%, 50rem);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

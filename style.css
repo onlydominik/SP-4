@@ -1,0 +1,95 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+:root {
+  font-size: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", "Times New Roman", sans-serif;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Lexend Deca", Arial, sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5rem;
+}
+
+button {
+  font-family: "Lexend Deca", Arial, sans-serif;
+  background-color: hsl(0, 0%, 95%);
+  mix-blend-mode: screen;
+  cursor: pointer;
+  padding: 10px 25px 10px 25px;
+  border-radius: 50px;
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: background-color 100ms;
+  white-space: nowrap;
+  align-self: self-end;
+}
+
+button:hover {
+  border: 2px solid hsl(0, 0%, 95%);
+  color: hsla(0, 0%, 100%, 0.75);
+  background-color: transparent;
+}
+
+.card--sedan {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.card--suv {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card--luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.wrapper {
+  width: clamp(15rem, 80%, 25rem);
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+  button {
+    margin-top: 4rem;
+  }
+  .wrapper {
+    width: clamp(30rem, 90%, 50rem);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=style.css.map */
